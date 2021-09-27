@@ -1,8 +1,5 @@
-import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FromFile {
@@ -13,13 +10,6 @@ public class FromFile {
                 FileReader file = new FileReader(path);
 
                 Scanner scanner = new Scanner(file);
-
-String 
-
-
-                ArrayList <String> combos = new ArrayList<String>();
-
-                BufferedReader reader = new BufferedReader(file);
 
                 while (scanner.hasNextLine()) {
                         System.out.println(scanner.nextLine());

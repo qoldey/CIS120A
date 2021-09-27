@@ -1,4 +1,0 @@
-                if (initialsArray[0].equalsIgnoreCase(b) && initialsArray[1].equalsIgnoreCase(r)
-                                && initialsArray[2].equalsIgnoreCase(g)) {
-                        System.out.println(BRG);
-                }
