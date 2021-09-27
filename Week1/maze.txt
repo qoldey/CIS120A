@@ -1,0 +1,35 @@
+#up then try right
+0 x*** -> n 1
+#if cant up, try left
+0 n*** -> x 2
+
+#right then try left
+1 *x** -> e 3
+#if cant right, try up
+1 *e** -> x 0
+
+#left then try right
+2 **x* -> w 0
+#if cant left, try down
+2 **w* -> x 3
+
+#down then try left
+3 ***x -> s 2
+#if cant down, try right
+3 ***s -> x 1
+
+#this loops through states until it finds a movement that it can do.
+# 0 = try ↑, if done, -> 1 (→) , else -> 2 (←)
+# 1 = try →, if done, -> 3 (↓) , else -> 0 (↑)
+# 2 = try ←, if done, -> 0 (↑) , else -> 3 (↓)
+# 3 = try ↓, if done, -> 2 (←) , else -> 1 (→)
+
+# L = look & go 
+# S = State after L
+# E = if not L
+#  L  S  E  -> "hug" the right/top wall, take every right turn.
+# (↑)(→)(←) -> keep going up
+# (→)(↓)(↑) -> keep going right
+# (←)(↑)(↓) -> keep going left
+# (↓)(←)(→) -> keep going down
+

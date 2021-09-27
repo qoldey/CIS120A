@@ -1,0 +1,23 @@
+#room
+#go to top of box
+0 x*** -> n 0
+
+#when reached top of box go left
+0 n*x* -> w 0
+
+#when reached top left corner, go down
+0 nxwx -> s 1
+
+#down
+1 ***x -> s 1
+
+#when reach bottom go right, then up
+1 ***s -> e 2
+
+#up
+2 x*** -> n 2
+
+#when reach top, go right, then down
+2 n*** -> e 1
+
+#State 1 and 2 loop to each other to repeat the up and down motion.

@@ -1,0 +1,7 @@
+zip -r output.zip /dirname
+unzip yourfile.zip
+
+
+tar -czvf mydirectory.tgz mydirectory
+tar -xvzf /path/to/yourfile.tgz
+
