@@ -14,6 +14,7 @@ public class FromFile {
                 while (scanner.hasNextLine()) {
                         System.out.println(scanner.nextLine());
                 }
+                scanner.close();
 
                 // 4-26 == AAA
                 //
