@@ -14,7 +14,7 @@ public class RockPaperScissors {
         // i > 0 = infinite games
         // i < 4 = 3 games.
         for (int i = 1; i > 0; i++) {
-            System.out.printf("\nGame #%d\n", i);
+            System.out.printf("Game #%d\n:/> ", i);
 
             // Prompt the user for their selection.
             do {
@@ -28,15 +28,17 @@ public class RockPaperScissors {
                     }
                 }
             } while (!(move.substring(0, 1).equalsIgnoreCase("r")) && !(move.substring(0, 1).equalsIgnoreCase("p"))
-                    && !(move.substring(0, 1).equalsIgnoreCase("s")) && !(move.substring(0, 1).equalsIgnoreCase("n")));
+                    && !(move.substring(0, 1).equalsIgnoreCase("s")) && !(move.substring(0, 1).equalsIgnoreCase("n"))
+                    && !(move.substring(0, 1).equalsIgnoreCase("h")));
 
             human = move.substring(0, 1).toLowerCase();
             if (human.equals("n")) {
                 break;
+            } else if (human.equals("h")) {
+                System.out.printf("\n%s\n", help());
             } else {
-
                 newgame(human, computer());
-                System.out.println("Play Again?");
+                System.out.printf("Play Again?\n\n");
             }
         }
         input.close();
@@ -83,6 +85,7 @@ public class RockPaperScissors {
                 To play, enter your move when prompted!
                 The computer will generate her own response and the winner will be decided.
                 Respond n to stop playing.
+                Respond h to show this message.
                 """;
     }
 
