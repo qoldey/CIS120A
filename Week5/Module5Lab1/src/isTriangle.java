@@ -9,15 +9,16 @@ public class isTriangle {
         double c = input[2];
         // Invokes a boolean method named isTriangle() passing the three side lengths as
         // arguments
-        System.out.printf("form a triangle: %b\n", isTriangle(a, b, c));
-        if (isTriangle(a, b, c)) {
+        if (isTrianglee(a, b, c)) {
             System.out.printf("%.2f, %.2f & %.2f can form a triangle.\n", a, b, c);
         } else {
             System.out.printf("%.2f, %.2f & %.2f cannot form a triangle.\n", a, b, c);
         }
     }
 
-    public static boolean isTriangle(double a, double b, double c) {
+    // I was getting this error with the name isTriangle, so I renamed it.
+    // isTriangle: This method has a constructor name
+    public static boolean isTrianglee(double a, double b, double c) {
         // Uses the return value from the method to report whether the three side
         // lengths can form a triangle
         return (a + b > c && b + c > a && c + a > b);
