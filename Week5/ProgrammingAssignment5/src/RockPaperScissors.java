@@ -33,6 +33,7 @@ public class RockPaperScissors {
 
             human = move.substring(0, 1).toLowerCase();
             if (human.equals("n")) {
+                System.out.printf("Farewell o7\n");
                 break;
             } else if (human.equals("h")) {
                 System.out.printf("\n%s\n", help());
