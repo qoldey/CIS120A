@@ -44,10 +44,4 @@ public class GuessMyNumber {
         System.out.println();
     }
 
-    public static boolean numGuess() {
-
-        return true;
-
-    }
-
 }
