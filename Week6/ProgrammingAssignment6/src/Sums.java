@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class App {
+public class Sums {
     public static void main(String[] args) {
         // Argument
         System.out.printf("Enter x value: ");
