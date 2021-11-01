@@ -32,7 +32,7 @@ public class App {
         i = 0;
         iteration = 0;
         sum = 0;
-        do {// this stops at 26 every time
+        do {// I have yet to see this go past 26.
             temp = iteration;
             iteration = (pow(-1, i) * (double) pow(x, (2 * i))) / factorial(i);
             sum += iteration;
