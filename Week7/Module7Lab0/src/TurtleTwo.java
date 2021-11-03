@@ -8,8 +8,8 @@ public class TurtleTwo {
     static int scale; // global scale var
 
     public static void main(String[] args) {
-        Turtle.bgcolor(new Color(53, 31, 91)); // background colour
-        scale = 1000; // scale
+        Turtle.bgcolor(new Color(17, 50, 77)); // background colour
+        scale = 500; // scale
         turtle.width(1); // width of line
         turtle.hide(); // hide turtle graphic
         turtle.speed(1); // lower number draws faster, 100 is default.
@@ -27,8 +27,8 @@ public class TurtleTwo {
 
     public static void rnglocation() {
         // random x y position [0-999] to start next star @
-        int x = rng.nextInt(scale * 5);
-        int y = rng.nextInt(scale * 5);
+        int x = rng.nextInt(scale * 4);
+        int y = rng.nextInt(scale * 4);
         turtle.setPosition(x, y);
     }
 
