@@ -9,7 +9,6 @@ public class TurtleTwo {
 
     public static void main(String[] args) {
         Turtle.bgcolor(new Color(17, 50, 77)); // background colour
-        Color green = new Color(0, 255, 0);
         scale = 500; // scale
         turtle.width(1); // width of line
         turtle.hide(); // hide turtle graphic
