@@ -77,7 +77,7 @@ public class Bouncing {
 
         square(pen, l, w); // draw wall @ l w
 
-        for (int i = 0; i < 5; i++) { //fit square
+        for (int i = 0; i < 5; i++) { // fit square
             try {
                 Turtle.zoomFit();
             } catch (NullPointerException e) {
@@ -86,7 +86,7 @@ public class Bouncing {
         }
 
         System.out.println("Loading...");
-        fill(pen, w, w, l); /fill the square
+        fill(pen, w, w, l); // fill the square
 
     }
 
