@@ -44,7 +44,7 @@ public class Bouncing {
         double yChange = frames;
         pen.penColor(bColour);
         while (true) {
-            System.out.printf("%.2f %.2f\n", pen.getX(), pen.getY());
+            System.out.printf("%d %d\n", x, y);
 
             x += xChange;
             y += yChange;
