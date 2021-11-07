@@ -12,7 +12,7 @@ public class Bouncing {
 
     public static void main(String[] args) {
         boolean hide;
-        double x, y; // starting x y location
+        int x, y; // starting x y location
         int l, w; // length and width
         double speed, width;
         double diameter, frames;
@@ -27,8 +27,8 @@ public class Bouncing {
         speed = 20;
         width = 1;
 
-        x = rng.nextDouble(w); // random starting x < w
-        y = rng.nextDouble(l); // random starting y < l
+        x = rng.nextInt(w); // random starting x < w
+        y = rng.nextInt(l); // random starting y < l
 
         diameter = 2; // dot diameter
         frames = 1; // dot frames per change
@@ -38,8 +38,8 @@ public class Bouncing {
         bounce(pen, theme[0], theme[1], x, y, diameter, w, l, frames);
     }
 
-    public static void bounce(Turtle pen, Color pColour, Color bColour, double x, double y, double diameter, int w,
-            int l, double frames) {
+    public static void bounce(Turtle pen, Color pColour, Color bColour, int x, int y, double diameter, int w, int l,
+            double frames) {
         double xChange = frames;
         double yChange = frames;
         pen.penColor(bColour);
