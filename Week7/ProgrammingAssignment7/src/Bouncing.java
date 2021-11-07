@@ -1,9 +1,8 @@
 import java.awt.Color; // rgb color 
 import java.util.Random;
 
-public class App {
+public class Bouncing {
 
-    // draw wall @ l w
     // interior = l*w
 
     // tp random number under l and w
@@ -35,7 +34,7 @@ public class App {
         frames = 1; // dot frames per change
 
         Color[] theme = settings(pen, speed, hide, width);
-        setup(pen, l, w);
+        setup(pen, l, w); // background square
         bounce(pen, theme[0], theme[1], x, y, diameter, w, l, frames);
     }
 
@@ -76,9 +75,9 @@ public class App {
 
     public static void setup(Turtle pen, int l, int w) {
 
-        square(pen, l, w);
+        square(pen, l, w); // draw wall @ l w
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++) { //fit square
             try {
                 Turtle.zoomFit();
             } catch (NullPointerException e) {
@@ -87,7 +86,7 @@ public class App {
         }
 
         System.out.println("Loading...");
-        fill(pen, w, w, l);
+        fill(pen, w, w, l); /fill the square
 
     }
 
