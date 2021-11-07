@@ -12,7 +12,7 @@ public class Bouncing {
 
     public static void main(String[] args) {
         boolean hide;
-        double x, y; // starting x y location
+        int x, y; // starting x y location
         int l, w; // length and width
         double speed, width;
         double diameter, frames;
@@ -27,8 +27,8 @@ public class Bouncing {
         speed = 20;
         width = 1;
 
-        x = rng.nextDouble(w); // random starting x < w
-        y = rng.nextDouble(l); // random starting y < l
+        x = rng.nextInt(w); // random starting x < w
+        y = rng.nextInt(l); // random starting y < l
 
         diameter = 2; // dot diameter
         frames = 1; // dot frames per change
