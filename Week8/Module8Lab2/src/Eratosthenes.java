@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class App {
+public class Eratosthenes {
     public static void main(String[] args) {
         boolean[] output = sieve(50);
 
