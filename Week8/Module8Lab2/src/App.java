@@ -4,6 +4,7 @@ public class App {
     public static void main(String[] args) {
         boolean[] output = sieve(50);
 
+        //print results
         for (int i = 0; i < output.length; i++) {
             System.out.printf("%b %d\n", output[i], i);
         }
@@ -34,6 +35,7 @@ public class App {
             }
         }
 
+        //return array with results.
         return a;
     }
 
