@@ -4,32 +4,15 @@ public class Histogram {
     public static void main(String[] args) {
         // input
         String in = "75170fc230cd88f32e475ff4087f81d9";
-        // get charCount
-        int[] charCount = letterHist(in);
-        // make array that pairs letter to count
-        String[][] histogram = new String[charCount.length][alphabet.length];
-        for (int i = 0; i < alphabet.length; i++) {
-            histogram[i][0] = Character.toString(alphabet[i]);
-            histogram[i][1] = Integer.toString(charCount[i]);
 
-        }
-
-        for (int i = 0; i < charCount.length; i++) {
-
-            System.out.printf("%d %C : ", charCount[i], alphabet[i]);
-            for (int j = 0; j < charCount[i]; j++) {
-                System.out.print("#");
-            }
-            System.out.println();
-        }
-
-        // Try Showing most reoccurring letter first next??
-
+        // print letterHist
+        letterHist(in, true);
     }
 
-    // a method called letterHist that takes a string as a parameter and returns a
-    // histogram of the letters in the string.
-    public static int[] letterHist(String input) {
+    // a method called letterHist that takes a string as a parameter and returns an
+    // int array with the frequency of each letter, optionally printing the results
+    // as a histogram with the print parameter.
+    public static int[] letterHist(String input, boolean... print) {
         int[] charCount = new int[alphabet.length];
 
         char letter;
@@ -48,6 +31,18 @@ public class Histogram {
                     charCount[j]++;
                 }
 
+            }
+
+        }
+
+        if (print.length > 0 && print[0] == true) {
+            for (int i = 0; i < charCount.length; i++) {
+
+                System.out.printf("%d %C : ", charCount[i], alphabet[i]);
+                for (int j = 0; j < charCount[i]; j++) {
+                    System.out.print("#");
+                }
+                System.out.println();
             }
 
         }
