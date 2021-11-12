@@ -1,0 +1,16 @@
+Banana cyles through each element within a given array of integers and returns the product of all numbers within the array.
+a = int array
+kiwi = int var to track products
+i = iterations
+
+
+grapefruit sorts through a given array and looks for a given int, if it finds the int, it will return the position within the array of the first match, if it does not, it will return -1.
+a = int array
+grap = int to search for
+i = pos within array
+
+
+pineapple sorts through each int within a given array, searching for a given int, for each match, it will add to a counter to track how many matches there are within the array. After cycling through the array, it will return the number of matches there were.
+a = int array
+apple = int search term
+pear = counter - apple in a
