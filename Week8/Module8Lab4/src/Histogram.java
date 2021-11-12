@@ -1,14 +1,14 @@
-public class App {
+public class Histogram {
     public static char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 
     public static void main(String[] args) {
+        // input
         String in = "75170fc230cd88f32e475ff4087f81d9";
-
+        // get charCount
         int[] charCount = letterHist(in);
-
+        // make array that pairs letter to count
         String[][] histogram = new String[charCount.length][alphabet.length];
         for (int i = 0; i < alphabet.length; i++) {
-
             histogram[i][0] = Character.toString(alphabet[i]);
             histogram[i][1] = Integer.toString(charCount[i]);
 
