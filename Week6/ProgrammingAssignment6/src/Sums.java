@@ -90,3 +90,41 @@ public class Sums {
     }
 
 }
+
+class solution {
+    public static double run() {
+        // Add n terms of the series for e^(-x^2)
+
+        double result = 0; // accumulator
+        double x = .7; // a value for x
+        int n = 20; // number of terms to add
+
+        double term = 1; // first term in the series is 1
+                         // we are assuming n >= 1
+
+        result += term; // add the first term to the accumulator
+
+        // got the first term added, now add the rest of them up
+
+        for (int i = 1; i <= n; i++) {
+            // to get the next term from the current one, increase power of x by 2
+            // (so multiply by x twice), and increase the factorial
+            // by a factor of i. This grows the denominator factorial by
+            // 1 (i.e from 3! to 4!), which is what we want. Also switch the sign.
+            // see https://laketahoecc.instructure.com/courses/6059/assignments/124369
+
+            term = -(term * x * x) / i;
+
+            // now add the new term on to the accumulator
+
+            result += term;
+        }
+
+        // done! return the result
+        return result;
+    }
+
+    public static void main(String[] args) {
+        run();
+    }
+}
