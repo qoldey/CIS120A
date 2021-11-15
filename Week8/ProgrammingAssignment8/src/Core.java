@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//core utils
 public class Core {
 
     public static char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
@@ -17,5 +18,4 @@ public class Core {
         }
         return output;
     }
-
 }
