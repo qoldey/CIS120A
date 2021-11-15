@@ -7,13 +7,10 @@ public class Anagram extends Library {
         // an anagram is basically when two strings char arrays match.
         // Examples: betas, baste, abets : stop, pots : allen downey, well annoyed
 
-        // write inputs array
+        // Options
         String write = ":w";
-        // quit program
         String quit = ":q";
-        // exit message
         String exit = "Exiting, Goodbye (^-^*)/";
-        // welcome message
         String keybinds = "Keybinds:\nCompare current entries = " + write + "\nQuit = " + quit;
 
         System.out.println(keybinds);
