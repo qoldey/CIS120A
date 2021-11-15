@@ -1,92 +1,61 @@
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
 
-public class Anagram {
-    public static char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+public class Anagram extends Library {
+    /// public static char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 
     public static void main(String[] args) {
-        // input
 
-        String out = inputString();
-        System.out.println(out);
+        // an anagram is basically when two strings char arrays match.
+        // Examples: betas, baste, abets : stop, pots : allen downey, well annoyed
 
-        String inOne = "arches";
-        String inTwo = "chaser";
+        // write inputs array
+        String write = ":w";
+        // quit program
+        String quit = ":q";
+        // exit message
+        String exit = "Exiting, Goodbye (^-^*)/";
+        // welcome message
+        String welcome = "Keybinds:\nCompare current entries = " + write + "\nQuit = " + quit;
 
-        boolean check = AnagramCheck(inOne, inTwo);
+        System.out.println(welcome);
 
-        System.out.println(check);
+        while (true) {
+            System.out.printf("Input String");
+            // get inputs with passed settings
 
-        // and anagram is basically when two strings char arrays match.
-    }
+            // ArrayList<String> inputs = inputArray(write, quit, exit);
+            ArrayList<String> inputs = inputArray();
 
-    public static String inputString() {
-        String output = "";
-        Scanner input = new Scanner(System.in);
-        System.out.print("In: ");
-        if (input.hasNextLine()) {
-            output = input.nextLine();
-        } else {
-            inputString();
-        }
-        return output;
-    }
-
-    public static boolean AnagramCheck(String inOne, String inTwo) {
-
-        int[] arrayOne = letterHist(inOne);
-        System.out.println();
-        int[] arrayTwo = letterHist(inTwo);
-
-        // print letterHist
-        if (Arrays.equals(arrayOne, arrayTwo)) {
-            return true;
-
-        } else {
-            return false;
+            // check if inputs are Anagrams
+            if (AnagramCheck(inputs)) {
+                System.out.printf("True, Input Strings are anagrams.\n");
+            } else {
+                System.out.printf("False, Input Strings are not anagrams.\n");
+            }
         }
 
     }
 
-    // a method called letterHist that takes a string as a parameter and returns an
-    // int array with the frequency of each letter, optionally printing the results
-    // as a histogram with the print parameter.
-    public static int[] letterHist(String input, boolean... print) {
-        int[] charCount = new int[alphabet.length];
+    // takes strings and checks whether they are anagrams of each other.
+    public static boolean AnagramCheck(ArrayList<String> inputs) {
 
-        char letter;
+        // must compare at least 2 arrays
+        if (inputs.size() < 2) {
+            System.err.printf("ERROR 002: Method requires minimum two(2) String Arguments.\n");
+            System.exit(0);
+        }
 
-        // Only traverse the string once.
-        for (int i = 0; i < input.length(); i++) {
-
-            letter = input.charAt(i);
-
-            for (int j = 0; j < alphabet.length; j++) {
-
-                // The zeroth element of the histogram should contain the number of a’s in the
-                // string (upper- and lowercase); the 25th element should contain the number of
-                // z’s.
-                if (Character.toLowerCase(letter) == Character.toLowerCase(alphabet[j])) {
-                    charCount[j]++;
-                }
-
+        // same runtime of n3 compared to making separate array for letterHist returns
+        for (int i = 0; i < inputs.size() - 1; i++) {
+            // if any two input Strings' letterHist are not equal
+            if (!Arrays.equals(letterHist(inputs.get(i)), letterHist(inputs.get(i + 1)))) {
+                return false;
             }
 
         }
 
-        if (print.length > 0 && print[0] == true) {
-            for (int i = 0; i < charCount.length; i++) {
-
-                System.out.printf("%d %C : ", charCount[i], alphabet[i]);
-                for (int j = 0; j < charCount[i]; j++) {
-                    System.out.print("#");
-                }
-                System.out.println();
-            }
-
-        }
-
-        return charCount;
+        return true;
     }
 
 }
