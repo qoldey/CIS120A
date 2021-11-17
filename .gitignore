@@ -3,7 +3,7 @@
 
 /.tex
 /.vscode
-/**/Quiz?
-/**/**/bin/*
+/*/Quiz?
+/*/*/bin
 /code
 /supplemental
