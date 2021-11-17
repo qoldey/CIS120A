@@ -1,14 +1,60 @@
 import java.awt.Color; // rgb color
 import java.util.Random;
+import java.util.Scanner;
 
 public class App {
 
     public static void main(String[] args) {
         Turtle pen = cturtle.settings(0.1, true, 50);
 
-        pen.
+        int scale = 50;
+        pen.down();
 
+        // function : y=mx+b
 
+        // solve a function
+        // get the answers as an array of arrays or list
+        // these answers are x y pairs, coordinates
+        // steps = 5;
+        // set pos xy[0] -> pen.down -> face pos xy[1] -> pen.forward[steps] ->
+        //
+        // for xy.length - 1
+        // face xy[i+1]
+        // pen.forward[steps]
+        // if pen.getX == x[i+1] && pen.getY == y[i+1]
+        // i++
+
+        // Enter a function to be solved:
+        // f(x)=-(1/2)x
+        // Find all solutions for
+        // y = -(1/2)x
+        // collect occasions where x and y are a solution within the size of the graph
+        // y =
+        // run method to graph
+
+        // 0 1
+        // 1 3
+        // 2 5
+        int start;
+        int end;
+        n
+
+        start = 0;
+        end = 10;
+
+        int range = Math.abs(start + end);
+        double spacing;
+
+        spacing = 0.5;
+
+        for (double i = 0; i < range; i += spacing) {
+
+        }
+
+        for (int i = 0; i < range; i++) {
+            pen.forward(scale);
+        }
+        Turtle.zoomFit();
     }
 
 }
