@@ -1,0 +1,9 @@
+*.png
+*.tgz
+
+/.tex
+/.vscode
+/**/Quiz?
+/**/**/bin/*
+/code
+/supplemental
