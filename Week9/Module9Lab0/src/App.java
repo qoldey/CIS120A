@@ -6,7 +6,6 @@ import java.awt.Color; // rgb color
 public class App {
 
     public static void main(String[] args) {
-        Turtle pen = settings(0.1, true, 50);
         double spacing;
         int start = -10; // lower val
         int end = 10; // upper val
@@ -16,6 +15,7 @@ public class App {
         // f1 = 1, f3 = 0.25, f4 = 5
         spacing = 1.005; // f2 =1.005
 
+        Turtle pen = settings(0.1, true, 50);
         setup(pen, start, end);
         drawGraph(function(start, end, spacing), pen);
 
