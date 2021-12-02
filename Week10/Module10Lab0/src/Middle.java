@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Middle {
     public static void main(String[] args) {
+        //asks the user to enter three integer values
         int[] out = midSearch(inputIntArray(3));
         System.out.printf("Min: %d\nMid: %d\nMax: %d\n", out[0], out[1], out[2]);
     }
@@ -46,6 +47,7 @@ public class Middle {
         return out;
     }
 
+    //a method named min which accepts two parameters of type int and returns an int.  The return value is the smaller of the two parameters - the minimum value.
     public static int min(int x, int y) {
         if (x > y) {
             return y;
@@ -53,7 +55,7 @@ public class Middle {
             return x;
         }
     }
-
+    //an analogous method named max.
     public static int max(int x, int y) {
         if (x > y) {
             return x;
