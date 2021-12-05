@@ -39,8 +39,8 @@ public class StringManip {
         // method. This method will require three
 
         // When you try to replace a char in a String you will run into a complication:
-        // Java Strings are immutable - you literally cannot change their content. (We
-        // will discuss the reasoning for this later in the course sequence.) So your
+        // Java Strings are immutable - you literally cannot change their content. So
+        // your
         // replace method is going to have to build a new String character by character,
         // choosing either to append the char from the original String, or instead the
         // replacement char, when building the new String.
