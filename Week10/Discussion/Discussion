@@ -1,0 +1,10 @@
+Hello class,
+I am personally a fan of the swtich statement and will definitely be using it in the future. I feel like it can help make larger blocks of if statements signifcantly easier to read and understand. A switch statement feels like a more specialized statement to handle this sort of thing, opposed to the more versatile and all encompassing if-then-else statement.
+I feel aesthetics are important in code, and a switch statement definitely helps with increasing the legibility of something that could be otherwise quite repetetive.
+Thanks everyone!
+
+Hey Vedant,
+I agree in thinking that both switch statements and if-else statements can be tedious to write out, especially when we start racking up the conditions that we need to test for. I wonder if there are more user-friendly/aesthetic methods for testing many conditions similar to a switch statement.
+Great post!
+Thanks,
+Ben Goldey :)
